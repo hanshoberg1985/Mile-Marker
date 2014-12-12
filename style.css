@@ -1,0 +1,109 @@
+/*
+Theme Name: Mile Marker
+Author: Hans Hoberg
+Description: Mile Marker main stylesheet
+Version: 1.0
+*/
+
+body {
+    background-color: #000000;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1 {
+    font-family: "Swiss911";
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: "NimbusSanTCon";
+    margin: 0;
+    padding: 0;
+}
+
+/* page container */
+.page-container:before, .page-container:after {
+    content: " ";
+    display: table;
+}
+
+.page-container:after {
+    clear: both;
+}
+
+/* side bar */
+.page-sidebar {
+    background-color: #231f20;
+    width: 181px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 10;
+}
+
+.page-sidebar.navbar-collapse {
+    padding: 0;
+    max-height: none !important;
+    box-shadow: none;
+    padding: 0;
+}
+
+.page-sidebar .page-sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.page-sidebar .page-sidebar-menu li {
+    margin: 0;
+    padding: 0;
+    display: block;
+    border-bottom: 1px solid #4f4c4d;
+}
+
+.page-sidebar .page-sidebar-menu li > a {
+    display: block;
+    font-family: "NimbusSanTCon";
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 20px 15px;
+    line-height: 21px;
+    cursor: pointer;
+}
+
+.page-sidebar .page-sidebar-menu li > a:hover {
+    color: #f26622;
+}
+
+/************* margin *****************/
+.marginL10 { margin-left: 10px; }
+.marginL20 { margin-left: 20px; }
+.marginL30 { margin-left: 30px; }
+.marginL40 { margin-left: 40px; }
+.marginL50 { margin-left: 50px; }
+.marginR10 { margin-right: 10px; }
+.marginR20 { margin-right: 20px; }
+.marginR30 { margin-right: 30px; }
+.marginR40 { margin-right: 40px; }
+.marginR50 { margin-right: 50px; }
+.marginT10 { margin-top: 10px; }
+.marginT20 { margin-top: 20px; }
+.marginT30 { margin-top: 30px; }
+.marginT40 { margin-top: 40px; }
+.marginT50 { margin-top: 50px; }
+.marginB10 { margin-bottom: 10px; }
+.marginB20 { margin-bottom: 20px; }
+.marginB30 { margin-bottom: 30px; }
+.marginB40 { margin-bottom: 40px; }
+.marginB50 { margin-bottom: 50px; }
+
+
