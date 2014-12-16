@@ -61,7 +61,7 @@ button, .button {
     text-decoration: none;
 }
 
-button:hover, .button:hover {
+button:hover, .button:hover, button:visited, .button:visited, button:focus, .button:focus {
     color: #FFFFFF;
     background-color: #f26622;
     text-decoration: none;
@@ -86,7 +86,7 @@ button:hover, .button:hover {
     top: 0;
     bottom: 0;
     position: fixed;
-    z-index: 10;
+    z-index: 1001;
 }
 
 .page-sidebar.navbar-collapse {

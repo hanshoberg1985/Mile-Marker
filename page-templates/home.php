@@ -42,6 +42,12 @@ get_header(); ?>
                         <a href="http://milemarker.com/where-to-buy" target="_self">WHERE TO BUY</a>
                     </li>
                 </ul>
+                <div class="search-content">
+                    <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+                        <input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" placeholder="Search" />
+                        <button type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
                 <div class="social-content">
                     <ul class="social-list">
                         <li>
@@ -113,36 +119,13 @@ get_header(); ?>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                                     <div class="row">
                                         <div class="col-md-7">
-                                            <input type="email" class="sign-me-email" value="Email Address" />
+                                            <input type="email" class="sign-me-email" placeholder="Email Address" />
                                         </div>
                                         <div class="col-md-5">
                                             <button type="button" class="sign-me-up">SIGN ME UP</button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="category-section">
-                <div class="section-content">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <ul class="category-nav">
-                                    <li>
-                                        <a href="http://milemarker.com/products/electric-winches/projectes" target="_self">FIND A PRODUCT</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="http://milemarker.com/products/recovery-gear" target="_self">FIND A DEALER</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="http://milemarker.com/products/drive-train-products/lock-out-hubs" target="_self">BECOME A DEALER</a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -171,6 +154,51 @@ get_header(); ?>
                             <div class="col-md-12">
                                 <h1>FROM THE TRAIL</h1>
                             </div>
+                        </div>
+                        <div class="row">
+                            <ul id="wire_list">
+                                <?php
+                                // twitter feeds
+                                echo do_shortcode('[fts twitter twitter_name=MileMarkerWinch]');
+
+                                // Instagram feeds
+                                echo do_shortcode('[fts instagram instagram_id=332678824]');
+
+                                // wp posts
+                                $post_count = 4;
+                                $args = array(
+                                    'orderby' => 'date',
+                                    'order' => 'DESC'
+                                );
+                                $query = new WP_Query( $args );
+                                if( $query->have_posts() ) {
+                                    $post_index = 0;
+                                    while ($query->have_posts() && $post_index < $post_count) {
+                                        $query->the_post();
+                                        $link = get_the_permalink();
+                                        $username = get_the_author();
+                                        $title = get_the_title();
+                                        $content = get_the_content();
+                                        $time = get_the_date();
+                                        echo "
+                                            <li class='feed-wrap col-lg-3 col-md-3 col-sm-4 col-xs-6'>
+                                                <div class='feed-info' href='$link'>
+                                                    <div class='feed-info-wrapper'>
+                                                        <div class='feed-user-name'>$username</div>
+                                                        <div class='feed-content'>
+                                                            <h3>$title</h3>
+                                                            <p>$content</p>
+                                                        </div>
+                                                        <div class='feed-time'>$time</div>
+                                                    </div>
+                                                </div>
+                                            </li>";
+                                        $post_index++;
+                                    }
+                                }
+                                wp_reset_query();
+                                ?>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -230,6 +258,7 @@ get_header(); ?>
                             </div>
                             <div class="col-md-6">
                                 <div class="contact-info">
+                                    <h3><i class="fa fa-home"></i> 2121 Blount Road Pompano Beach, FL USA</h3>
                                     <h3><i class="fa fa-phone"></i> 1(800) 000 - 0000</h3>
                                     <h3><i class="fa fa-envelope"></i> help@milemarker.com</h3>
                                 </div>
@@ -237,7 +266,7 @@ get_header(); ?>
                                     <h4>SIGN UP FOR STUFF.</h4>
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <input type="email" class="sign-me-email" value="Email Address" />
+                                            <input type="email" class="sign-me-email" placeholder="Email Address" />
                                         </div>
                                         <div class="col-md-4">
                                             <button type="button" class="sign-me-up">SIGN ME UP</button>
@@ -263,11 +292,7 @@ get_header(); ?>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="<?php echo get_template_directory_uri(); ?>/bootstrap/js/bootstrap.min.js"></script>
 
-<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/jquery.counterup.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/TweenMax.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/jquery.scrollmagic.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/jquery.scrolltofixed.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/fancybox/jquery.mousewheel-3.0.6.pack.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/fancybox/jquery.fancybox.js?v=2.1.4"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
@@ -317,4 +342,15 @@ get_header(); ?>
         });
 
     }
+
+    $('.category-section').scrollToFixed({
+        limit: $('#section4').offset().top - $('.category-section').outerHeight(true)
+    });
+
+    $('.feed-info').on('click', function(e) {
+        var href = $(this).attr('href');
+        if(href != undefined) location.href = href;
+    });
 </script>
+
+<?php get_footer(); ?>

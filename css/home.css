@@ -1,3 +1,28 @@
+.search-content {
+}
+
+#searchform {
+    position: absolute;
+    left: 0;
+    bottom: 70px;
+}
+
+#searchform input[type="text"] {
+    background-color: #1a1718;
+    width: calc(100% - 60px);
+    float: left;
+}
+
+#searchsubmit {
+    width: 60px;
+    height: 60px;
+    background-color: #f26622;
+    text-align: center;
+    color: #1a1718;
+    float: right;
+    font-size: 24px;
+}
+
 .social-content {
     background-color: #3a3334;
     width: 181px;
@@ -143,6 +168,7 @@
 
 #section1 .gator-logo {
     margin-top: 20px;
+    width: auto;
 }
 
 #section1 .btn_play_button {
@@ -311,6 +337,165 @@
     margin: 38px 0 38px 90px;
 }
 
+/* feed list stylesheet */
+#wire_list {
+
+}
+
+.feed-wrap {
+    padding: 0;
+}
+
+.feed-wrap:nth-child(12n+1) .feed-info, .feed-wrap:nth-child(12n+1) .feed-content-overlay  { background-color: #f26522; }
+.feed-wrap:nth-child(12n+2) .feed-info, .feed-wrap:nth-child(12n+2) .feed-content-overlay { background-color: #231f20; }
+.feed-wrap:nth-child(12n+3) .feed-info, .feed-wrap:nth-child(12n+3) .feed-content-overlay { background-color: #c8c2bd; }
+.feed-wrap:nth-child(12n+4) .feed-info, .feed-wrap:nth-child(12n+4) .feed-content-overlay { background-color: #f26522; }
+.feed-wrap:nth-child(12n+5) .feed-info, .feed-wrap:nth-child(12n+5) .feed-content-overlay { background-color: #c8c2bd; }
+.feed-wrap:nth-child(12n+6) .feed-info, .feed-wrap:nth-child(12n+6) .feed-content-overlay { background-color: #231f20; }
+.feed-wrap:nth-child(12n+7) .feed-info, .feed-wrap:nth-child(12n+7) .feed-content-overlay { background-color: #f26522; }
+.feed-wrap:nth-child(12n+8) .feed-info, .feed-wrap:nth-child(12n+8) .feed-content-overlay { background-color: #c8c2bd; }
+.feed-wrap:nth-child(12n+9) .feed-info, .feed-wrap:nth-child(12n+9) .feed-content-overlay { background-color: #231f20; }
+.feed-wrap:nth-child(12n+10) .feed-info, .feed-wrap:nth-child(12n+10) .feed-content-overlay { background-color: #c8c2bd; }
+.feed-wrap:nth-child(12n+11) .feed-info, .feed-wrap:nth-child(12n+11) .feed-content-overlay { background-color: #f26522; }
+.feed-wrap:nth-child(12n+12) .feed-info, .feed-wrap:nth-child(12n+12) .feed-content-overlay { background-color: #231f20; }
+
+.feed-info {
+    word-wrap: break-word;
+    font-size: 22px;
+    line-height: 26px;
+    height: 300px;
+    font-family: "NimbusSanTCon";
+    position: relative;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.feed-info .feed-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.feed-info.has-bg {
+    background-color: transparent !important;
+}
+
+.feed-info .feed-avatar,
+.feed-info .feed-user-name,
+.feed-info .feed-time {
+    opacity: 0;
+}
+
+.feed-info:hover .feed-avatar,
+.feed-info:hover .feed-user-name,
+.feed-info:hover .feed-time {
+    opacity: 1;
+}
+
+.feed-info.has-bg .feed-content {
+    opacity: 0;
+}
+
+.feed-info.has-bg:hover .feed-content-overlay,
+.feed-info.has-bg:hover .feed-content {
+    opacity: 1;
+}
+
+.feed-content-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0;
+}
+
+.feed-info-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    z-index: 1;
+}
+
+.feed-info.has-bg:hover .feed-content-overlay {
+    opacity: 0.5;
+}
+
+.feed-avatar {
+    float: left;
+}
+
+.feed-avatar img {
+    border-radius: 50px;
+    max-width: 100%;
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+}
+
+.feed-user-name,
+.feed-user-name > a {
+    margin-top: 10px;
+    font-family: "NimbusSanTCon";
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 1;
+}
+
+.feed-content {
+    height: 150px;
+    overflow: hidden;
+    clear: both;
+    margin-top: 25px;
+    padding-right: 20px;
+    font-family: "NimbusSanTCon";
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.feed-content > a,
+.feed-content > a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+    font-family: "NimbusSanTCon";
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.feed-content h3 {
+    margin-top: 25px;
+    font-family: "NimbusSanTCon";
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.feed-content p {
+    font-family: "NimbusSanTCon";
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.feed-time {
+    font-family: "NimbusSanTCon";
+    font-size: 14px;
+    color: #FFFFFF;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
 /*************************** section4 stylesheet end *****************************/
 
 /*************************** section5 stylesheet start *****************************/
@@ -359,7 +544,7 @@
 .bottom-nav li > h5 {
     font-family: "NimbusSanTCon";
     color: #f26522;;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .bottom-nav li > a {
@@ -406,7 +591,7 @@
 .copyright {
     font-family: "NimbusSanTCon";
     color: #c8c2bd;
-    font-size: 7px;
+    font-size: 10px;
 }
 
 /*************************** bottom section stylesheet end *****************************/
