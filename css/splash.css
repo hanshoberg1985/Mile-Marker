@@ -7,7 +7,7 @@
     z-index: 1;
 }
 
-.page-content-wrapper .page-content {
+.page-content-wrapper .splash-page-content {
     padding: 60px 0px 75px 250px;
     position: relative;
     width: 100%;
@@ -252,7 +252,7 @@ h1.content-title {
         display: block !important;
     }
 
-    .page-content-wrapper .page-content {
+    .page-content-wrapper .splash-page-content {
         padding: 20px;
     }
 

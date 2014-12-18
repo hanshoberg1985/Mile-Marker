@@ -7,6 +7,10 @@
 get_header(); ?>
 
 <link href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.min.css" rel="stylesheet">
+<link href="<?php echo get_template_directory_uri(); ?>/css/plugin/perfect-scrollbar.css" rel="stylesheet">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/plugin/ion.rangeSlider.css" />
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/plugin/ion.rangeSlider.skinFlat.css" />
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/plugin/ion.rangeSlider.skinHTML5.css" />
 <link href="<?php echo get_template_directory_uri(); ?>/css/home.css" rel="stylesheet">
 
 </head>
@@ -83,29 +87,6 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
-            <section class="category-section">
-                <div class="section-content">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <ul class="category-nav">
-                                    <li>
-                                        <a href="http://milemarker.com/products/electric-winches/projectes" target="_self">FIND A PRODUCT</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="http://milemarker.com/products/recovery-gear" target="_self">FIND A DEALER</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="http://milemarker.com/products/drive-train-products/lock-out-hubs" target="_self">BECOME A DEALER</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <section id="section2">
                 <div class="section-content">
                     <div class="container-fluid">
@@ -131,17 +112,808 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
-            <section id="section3">
+            <section class="category-section">
                 <div class="section-content">
                     <div class="container-fluid">
                         <div class="row">
+                            <div class="col-md-12">
+                                <ul class="category-nav">
+                                    <li>
+                                        <a href="#winches_and_hubs" data-link="#winches_and_hubs" class="applet-button" target="_self">FIND A PRODUCT</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#how_do_you_buy" data-link="#how_do_you_buy" class="applet-button" target="_self">FIND A DEALER</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#winches_and_hubs" data-link="#winches_and_hubs" class="applet-button" target="_self">BECOME A DEALER</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section3">
+                <div class="section-content">
+                    <div class="container-fluid">
+                        <!-- Winches And Hubs -->
+                        <div class="row applet-area padding0" id="winches_and_hubs" style="display: block;">
                             <div class="col-md-6">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/winches_gator_car.png" />
-                                <button>WINCHES</button>
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/applet/winches_gator_car.png" />
+                                <a class="button product-finder-button applet-button" href="#search_for_winch" data-link="#search_for_winch">WINCHES</a>
                             </div>
                             <div class="col-md-6">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/hubs_gator_car.png" />
-                                <button>HUBS</button>
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/applet/hubs_gator_car.png" />
+                                <a class="button product-finder-button applet-button" href="#select_your_vehicle" data-link="#select_your_vehicle">HUBS</a>
+                            </div>
+                        </div>
+
+                        <!-- Search For Winch -->
+                        <div class="row applet-area" id="search_for_winch">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a class="button back-button applet-button" href="#winches_and_hubs" data-link="#winches_and_hubs">BACK</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1 class="applet-title">SEARCH BY WINCH</h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="row">
+                                            <div class="col-md-4 search-by-item">
+                                                <div class="vehicle-icon search-by-icon"></div>
+                                                <a class="button search-by-button applet-button" href="#product_finder_select_vehicle" data-link="#product_finder_select_vehicle">VEHICLE</a>
+                                            </div>
+                                            <div class="col-md-4 search-by-item">
+                                                <div class="industry-icon search-by-icon"></div>
+                                                <a class="button search-by-button applet-button" href="#select_your_industry" data-link="#select_your_industry">INDUSTRY</a>
+                                            </div>
+                                            <div class="col-md-4 search-by-item">
+                                                <div class="capacity-icon search-by-icon"></div>
+                                                <a class="button search-by-button applet-button" href="#choose_winch_capacity" data-link="#choose_winch_capacity">CAPACITY</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Select Your Vehicle -->
+                        <div class="row applet-area" id="select_your_vehicle">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a class="button back-button applet-button" href="#winches_and_hubs" data-link="#winches_and_hubs">BACK</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1 class="applet-title">SELECT YOUR VEHICLE:</h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="row">
+                                            <div class="col-md-4 select-content">
+                                                <div class="select-control">
+                                                    MAKE
+                                                    <i class="fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="select-drop-list">
+                                                    <li>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">CHEVY</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">JEEP</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">LAND ROVER</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">CHEVY</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">JEEP</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">LAND ROVER</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4 select-content">
+                                                <div class="select-control">
+                                                    MODEL
+                                                    <i class="fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="select-drop-list">
+                                                    <li>
+                                                        <a href="javascript:void(0);">CHEVY</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">JEEP</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">LAND ROVER</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">CHEVY</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">JEEP</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">LAND ROVER</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4 select-content">
+                                                <div class="select-control">
+                                                    YEAR
+                                                    <i class="fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="select-drop-list">
+                                                    <li>
+                                                        <a href="javascript:void(0);">CHEVY</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">JEEP</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">LAND ROVER</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">CHEVY</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">JEEP</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">LAND ROVER</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Select Your Industry -->
+                        <div class="row applet-area" id="select_your_industry">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a class="button back-button applet-button" href="#search_for_winch" data-link="#search_for_winch">BACK</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1 class="applet-title">SELECT YOUR INDUSTRY:</h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="row">
+                                            <div class="col-md-4 select-content">
+                                                <div class="select-control">
+                                                    MAKE
+                                                    <i class="fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="select-drop-list">
+                                                    <li>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">CHEVY</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">JEEP</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">LAND ROVER</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">CHEVY</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">JEEP</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">LAND ROVER</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4 select-content">
+                                                <div class="select-control">
+                                                    MODEL
+                                                    <i class="fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="select-drop-list">
+                                                    <li>
+                                                        <a href="javascript:void(0);">CHEVY</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">JEEP</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">LAND ROVER</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">CHEVY</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">JEEP</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">LAND ROVER</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4 select-content">
+                                                <div class="select-control">
+                                                    YEAR
+                                                    <i class="fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="select-drop-list">
+                                                    <li>
+                                                        <a href="javascript:void(0);">CHEVY</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">JEEP</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">LAND ROVER</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">CHEVY</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">JEEP</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">LAND ROVER</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Choose Your Product -->
+                        <div class="row applet-area" id="choose_your_product">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a class="button back-button applet-button" href="#select_your_vehicle" data-link="#select_your_vehicle">BACK</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1 class="applet-title">CHOOSE YOUR PRODUCT</h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="row">
+                                            <ul class="product-list">
+                                                <li class="col-md-6">
+                                                    <div class="row product-item">
+                                                        <div class="col-md-5 product-img">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/images/applet/product_sample.png" />
+                                                            <a class="view-product-button">VIEW PRODUCT</a>
+                                                        </div>
+                                                        <div class="col-md-7 product-content">
+                                                            <h5>(H9000)</h5>
+                                                            <p>Part Number: 75-52000C</p>
+                                                            <p>Capacity: 9,000 pounds</p>
+                                                            <p>Line Speed: 30rpm</p>
+                                                            <p>Cable: 100' Steel</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-md-6">
+                                                    <div class="row product-item">
+                                                        <div class="col-md-5 product-img">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/images/applet/product_sample.png" />
+                                                            <a class="view-product-button">VIEW PRODUCT</a>
+                                                        </div>
+                                                        <div class="col-md-7 product-content">
+                                                            <h5>(H9000)</h5>
+                                                            <p>Part Number: 75-52000C</p>
+                                                            <p>Capacity: 9,000 pounds</p>
+                                                            <p>Line Speed: 30rpm</p>
+                                                            <p>Cable: 100' Steel</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-md-6">
+                                                    <div class="row product-item">
+                                                        <div class="col-md-5 product-img">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/images/applet/product_sample.png" />
+                                                            <a class="view-product-button">VIEW PRODUCT</a>
+                                                        </div>
+                                                        <div class="col-md-7 product-content">
+                                                            <h5>(H9000)</h5>
+                                                            <p>Part Number: 75-52000C</p>
+                                                            <p>Capacity: 9,000 pounds</p>
+                                                            <p>Line Speed: 30rpm</p>
+                                                            <p>Cable: 100' Steel</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-md-6">
+                                                    <div class="row product-item">
+                                                        <div class="col-md-5 product-img">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/images/applet/product_sample.png" />
+                                                            <a class="view-product-button">VIEW PRODUCT</a>
+                                                        </div>
+                                                        <div class="col-md-7 product-content">
+                                                            <h5>(H9000)</h5>
+                                                            <p>Part Number: 75-52000C</p>
+                                                            <p>Capacity: 9,000 pounds</p>
+                                                            <p>Line Speed: 30rpm</p>
+                                                            <p>Cable: 100' Steel</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-md-6">
+                                                    <div class="row product-item">
+                                                        <div class="col-md-5 product-img">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/images/applet/product_sample.png" />
+                                                            <a class="view-product-button">VIEW PRODUCT</a>
+                                                        </div>
+                                                        <div class="col-md-7 product-content">
+                                                            <h5>(H9000)</h5>
+                                                            <p>Part Number: 75-52000C</p>
+                                                            <p>Capacity: 9,000 pounds</p>
+                                                            <p>Line Speed: 30rpm</p>
+                                                            <p>Cable: 100' Steel</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="col-md-6">
+                                                    <div class="row product-item">
+                                                        <div class="col-md-5 product-img">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/images/applet/product_sample.png" />
+                                                            <a class="view-product-button">VIEW PRODUCT</a>
+                                                        </div>
+                                                        <div class="col-md-7 product-content">
+                                                            <h5>(H9000)</h5>
+                                                            <p>Part Number: 75-52000C</p>
+                                                            <p>Capacity: 9,000 pounds</p>
+                                                            <p>Line Speed: 30rpm</p>
+                                                            <p>Cable: 100' Steel</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Buy Local -->
+                        <div class="row applet-area" id="buy_local">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a class="button back-button applet-button" href="#how_do_you_buy" data-link="#how_do_you_buy">BACK</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1 class="applet-title">BUY LOCAL</h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5 col-md-offset-1">
+                                        <div class="row">
+                                            <div class="col-md-7 padding5">
+                                                <input type="text" placeholder="Zipcode*" />
+                                            </div>
+                                            <div class="col-md-5 padding5">
+                                                <button class="small-button">SEARCH</button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <ul class="property-list padding5">
+                                                <li>
+                                                    <a class="property-item">
+                                                        <div class="col-md-7 title">Alligator Off-Road Madness</div>
+                                                        <div class="col-md-5">
+                                                            <div class="score-icon"></div>
+                                                            <div class="score-icon active"></div>
+                                                            <div class="score-icon active"></div>
+                                                            <div class="score-icon"></div>
+                                                            <div class="score-icon"></div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="property-item">
+                                                        <div class="col-md-7 title">Hillbilly Parts</div>
+                                                        <div class="col-md-5">
+                                                            <div class="score-icon active"></div>
+                                                            <div class="score-icon active"></div>
+                                                            <div class="score-icon"></div>
+                                                            <div class="score-icon active"></div>
+                                                            <div class="score-icon active"></div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="property-item">
+                                                        <div class="col-md-7 title">Hammerhead Trucks</div>
+                                                        <div class="col-md-5">
+                                                            <div class="score-icon active"></div>
+                                                            <div class="score-icon active"></div>
+                                                            <div class="score-icon active"></div>
+                                                            <div class="score-icon"></div>
+                                                            <div class="score-icon"></div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="property-item">
+                                                        <div class="col-md-7 title">Baracuda 4X4 Inc.</div>
+                                                        <div class="col-md-5">
+                                                            <div class="score-icon"></div>
+                                                            <div class="score-icon"></div>
+                                                            <div class="score-icon active"></div>
+                                                            <div class="score-iconactive"></div>
+                                                            <div class="score-icon"></div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="property-item">
+                                                        <div class="col-md-7 title">Get Er Done Auto</div>
+                                                        <div class="col-md-5">
+                                                            <div class="score-icon"></div>
+                                                            <div class="score-icon active"></div>
+                                                            <div class="score-icon active"></div>
+                                                            <div class="score-icon active"></div>
+                                                            <div class="score-icon"></div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="property-item">
+                                                        <div class="col-md-7 title">Distance</div>
+                                                        <div class="col-md-5">
+                                                            <div class="score-icon active"></div>
+                                                            <div class="score-icon active"></div>
+                                                            <div class="score-icon active"></div>
+                                                            <div class="score-icon active"></div>
+                                                            <div class="score-icon"></div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 padding5">
+                                        <div class="row">
+                                            <div class="col-md-12 map-area">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/images/applet/map.png" />
+                                            </div>
+                                        </div>
+                                        <div class="row marginT10">
+                                            <div class="col-md-7 local-contact-info">
+                                                <p class="user-name">HAMMERHEAD TRUCKS</p>
+                                                <p class="address">2031 Sharkfin Way</p>
+                                                <p class="address">Pompano Beach, FL 33069</p>
+                                                <p class="phone">(888) 000-0000</p>
+                                                <p class="email">bitten@hammerheadtrucks.com</p>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <button class="small-button marginT40">VISIT WEBSITE</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Buy International -->
+                        <div class="row applet-area" id="buy_international">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a class="button back-button applet-button" href="#how_do_you_buy" data-link="#how_do_you_buy">BACK</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1 class="applet-title">BUY INTERNATIONAL</h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5 col-md-offset-1">
+                                        <div class="row">
+                                            <div class="col-md-7 padding5">
+                                                <input type="text" placeholder="Country*" />
+                                            </div>
+                                            <div class="col-md-5 padding5">
+                                                <button class="small-button">SEARCH</button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <ul class="property-list marginT30 padding5">
+                                                <li>
+                                                    <a class="property-item">
+                                                        Dealer1
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="property-item">
+                                                        Dealer2
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="property-item">
+                                                        Dealer3
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="property-item">
+                                                        Dealer4
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="property-item">
+                                                        Dealer5
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 padding30">
+                                        <div class="row">
+                                            <div class="col-md-12 international-contact-info">
+                                                <p class="user-name">HAMMERHEAD TRUCKS</p>
+                                                <p class="address">2031 Sharkfin Way</p>
+                                                <p class="address">Pompano Beach, FL 33069</p>
+                                                <p class="phone">(888) 000-0000</p>
+                                                <p class="email">bitten@hammerheadtrucks.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="international-score-list marginT30">
+                                                <div class="score-icon active"></div>
+                                                <div class="score-icon active"></div>
+                                                <div class="score-icon active"></div>
+                                                <div class="score-icon active"></div>
+                                                <div class="score-icon"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <button class="small-button marginT30">VISIT WEBSITE</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Choose Winch Capacity -->
+                        <div class="row applet-area" id="choose_winch_capacity">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a class="button back-button applet-button" href="#search_for_winch" data-link="#search_for_winch">BACK</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1 class="applet-title">CHOOSE WINCH CAPACITY</h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="capacity-text pulling-capacity">DESIRED PULLING CAPACITY</p>
+                                                <input type="text" id="range" value="" name="range" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 capacity-value">
+                                                <p class="capacity-text">I NEED A WINCH THAT CAN PULL:</p>
+                                                <p class="capacity-value">25,000 LBS</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <button class="small-button">VIEW WINCHES</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Buy Online -->
+                        <div class="row applet-area" id="buy_online">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a class="button back-button applet-button" href="#how_do_you_buy" data-link="#how_do_you_buy">BACK</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1 class="applet-title">BUY ONLINE</h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="row">
+                                            <ul class="buy-online-list">
+                                                <li class="col-md-2">
+                                                    <a class="buy-online-item">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/company_mark_sample.png" />
+                                                        <p>Company Name</p>
+                                                    </a>
+                                                </li>
+                                                <li class="col-md-2">
+                                                    <a class="buy-online-item">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/company_mark_sample.png" />
+                                                        <p>Company Name</p>
+                                                    </a>
+                                                </li>
+                                                <li class="col-md-2">
+                                                    <a class="buy-online-item">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/company_mark_sample.png" />
+                                                        <p>Company Name</p>
+                                                    </a>
+                                                </li>
+                                                <li class="col-md-2">
+                                                    <a class="buy-online-item">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/company_mark_sample.png" />
+                                                        <p>Company Name</p>
+                                                    </a>
+                                                </li>
+                                                <li class="col-md-2">
+                                                    <a class="buy-online-item">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/company_mark_sample.png" />
+                                                        <p>Company Name</p>
+                                                    </a>
+                                                </li>
+                                                <li class="col-md-2">
+                                                    <a class="buy-online-item">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/company_mark_sample.png" />
+                                                        <p>Company Name</p>
+                                                    </a>
+                                                </li>
+                                                <li class="col-md-2">
+                                                    <a class="buy-online-item">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/company_mark_sample.png" />
+                                                        <p>Company Name</p>
+                                                    </a>
+                                                </li>
+                                                <li class="col-md-2">
+                                                    <a class="buy-online-item">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/company_mark_sample.png" />
+                                                        <p>Company Name</p>
+                                                    </a>
+                                                </li>
+                                                <li class="col-md-2">
+                                                    <a class="buy-online-item">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/company_mark_sample.png" />
+                                                        <p>Company Name</p>
+                                                    </a>
+                                                </li>
+                                                <li class="col-md-2">
+                                                    <a class="buy-online-item">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/company_mark_sample.png" />
+                                                        <p>Company Name</p>
+                                                    </a>
+                                                </li>
+                                                <li class="col-md-2">
+                                                    <a class="buy-online-item">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/company_mark_sample.png" />
+                                                        <p>Company Name</p>
+                                                    </a>
+                                                </li>
+                                                <li class="col-md-2">
+                                                    <a class="buy-online-item">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/company_mark_sample.png" />
+                                                        <p>Company Name</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-md-offset-3">
+                                                <button>SEE ALL ONLINE DEALERS</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Finder Select Vehicle -->
+                        <div class="row applet-area" id="product_finder_select_vehicle">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a class="button back-button applet-button" href="#search_for_winch" data-link="#search_for_winch">BACK</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1 class="applet-title">SELECT YOUR VEHICLE:</h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/atv.png" />
+                                        <button class="product-finder-button">ATV</button>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/utv.png" />
+                                        <button class="product-finder-button">UTV</button>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/jeep.png" />
+                                        <button class="product-finder-button">JEEP</button>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/suv.png" />
+                                        <button class="product-finder-button">SUV</button>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/light_duty_truck.png" />
+                                        <button class="product-finder-button">LIGHT- DUTY TRUCK</button>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/applet/heavy_duty_truck.png" />
+                                        <button class="product-finder-button">HEAVY- DUTY TRUCK</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- How do you buy? -->
+                        <div class="row applet-area" id="how_do_you_buy">
+                            <div class="col-md-12">
+                                <!--
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button class="back-button applet-button">BACK</button>
+                                    </div>
+                                </div>
+                                -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1 class="applet-title">HOW DO YOU BUY?</h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="row">
+                                            <div class="col-md-4 search-by-item">
+                                                <div class="buy-online-icon search-by-icon buy-icon"></div>
+                                                <a class="button search-by-button applet-button" href="#buy_online" data-link="#buy_online">BUY ONLINE</a>
+                                            </div>
+                                            <div class="col-md-4 search-by-item">
+                                                <div class="buy-local-icon search-by-icon buy-icon"></div>
+                                                <a class="button search-by-button applet-button" href="#buy_local" data-link="#buy_local">BUY LOCAL</a>
+                                            </div>
+                                            <div class="col-md-4 search-by-item">
+                                                <div class="buy-international-icon search-by-icon buy-icon"></div>
+                                                <a class="button search-by-button applet-button" href="#buy_international" data-link="#buy_international">BUY INTERNATIONAL</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -293,6 +1065,11 @@ get_header(); ?>
 <script src="<?php echo get_template_directory_uri(); ?>/bootstrap/js/bootstrap.min.js"></script>
 
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/jquery.scrolltofixed.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/perfect-scrollbar.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/ion.rangeSlider.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/jquery.easing.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/jquery.localscroll-1.2.7-min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/fancybox/jquery.mousewheel-3.0.6.pack.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/fancybox/jquery.fancybox.js?v=2.1.4"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
@@ -343,14 +1120,60 @@ get_header(); ?>
 
     }
 
-    $('.category-section').scrollToFixed({
-        limit: $('#section4').offset().top - $('.category-section').outerHeight(true)
-    });
-
     $('.feed-info').on('click', function(e) {
         var href = $(this).attr('href');
         if(href != undefined) location.href = href;
     });
+
+    $('.search-by-button').on('mouseover', function(e) {
+        $('.search-by-icon').removeClass('hover');
+        $(this).parent().find('.search-by-icon').addClass('hover');
+    });
+
+    $('.search-by-button').on('mouseout', function(e) {
+        $('.search-by-icon').removeClass('hover');
+    });
+
+    $('.select-control').on('click', function(e) {
+        var select_content = $(this).closest('.select-content');
+        if(select_content.hasClass('active')) {
+            select_content.removeClass('active');
+        } else {
+            $('.select-content').removeClass('active');
+            select_content.addClass('active');
+        }
+    });
+
+    $('.applet-button').on('click', function(e) {
+        e.preventDefault();
+        var link = $(this).attr('data-link');
+        if(link != undefined) {
+            $('.applet-area').css('display', 'none');
+            $(link).css('display', 'block');
+        }
+    });
+
+    $(document).ready(function ($) {
+        $('.select-drop-list').perfectScrollbar();
+
+        $('.applet-area').localScroll({hash:true, offset: {top: 0},duration: 1000, easing:'easeInOutExpo'});
+        $('.category-section').localScroll({hash:true, offset: {top: 0},duration: 1000, easing:'easeInOutExpo'});
+
+        $("#range").ionRangeSlider({
+            hide_min_max: true,
+            min: 2000,
+            max: 20000,
+            step: 2000,
+            values: [2000, 4000, 6000, 8000, 10000, 12000, 14000, 16000, 18000, 20000],
+            grid: true,
+            prettify_separator: ","
+        });
+
+        $('.category-section').scrollToFixed({
+            limit: $('#section4').offset().top - $('.category-section').outerHeight(true)
+        });
+    });
+
 </script>
 
 <?php get_footer(); ?>

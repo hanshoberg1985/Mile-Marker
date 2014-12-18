@@ -45,7 +45,7 @@ get_header(); ?>
         </div>
     </div>
     <div class="page-content-wrapper">
-        <div class="page-content">
+        <div class="splash-page-content">
             <h1 class="content-title">THIS WINCH CHANGES<br>EVERYTHING.</h1>
             <div class="content-title-divider"></div>
             <img class="top-logo" src="<?php echo get_template_directory_uri(); ?>/images/top_logo.png" />
