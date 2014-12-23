@@ -88,7 +88,19 @@
     -moz-border-radius: 3px;
     width: 55px;
     height: 55px;
-    background: url("../../images/applet/range_picker_icon.png") no-repeat scroll center center #f26622;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #f26622;
+}
+.irs-single.first {
+    background-image: url("../../images/applet/range_picker_icon1.png");
+}
+.irs-single.second {
+    background-image: url("../../images/applet/range_picker_icon2.png");
+}
+.irs-single.third {
+    background-image: url("../../images/applet/range_picker_icon3.png");
 }
 .lt-ie9 .irs-from, .lt-ie9 .irs-to, .lt-ie9 .irs-single {
     background: #999;

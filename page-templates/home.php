@@ -32,6 +32,22 @@ get_header(); ?>
                 <ul class="page-sidebar-menu" data-slide-speed="200" data-auto-scroll="true">
                     <li>
                         <a href="http://milemarker.com/products" target="_self">PRODUCTS</a>
+                        <ul>
+                            <li>
+                                <a href="#">SAMPLE TEXT 1</a>
+                                <ul>
+                                    <li><a href="#">SAMPLE TEXT 1</a></li>
+                                    <li><a href="#">SAMPLE TEXT 2</a></li>
+                                    <li><a href="#">SAMPLE TEXT 3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">SAMPLE TEXT 2</a></li>
+                            <li><a href="#">SAMPLE TEXT 3</a></li>
+                            <li><a href="#">SAMPLE TEXT 4</a></li>
+                            <li><a href="#">SAMPLE TEXT 5</a></li>
+                            <li><a href="#">SAMPLE TEXT 6</a></li>
+                            <li><a href="#">SAMPLE TEXT 7</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="http://milemarker.com/team-orange" target="_self">TEAM ORANGE</a>
@@ -87,6 +103,29 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
+            <section class="category-section">
+                <div class="section-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="category-nav">
+                                    <li>
+                                        <a href="#winches_and_hubs" data-link="#winches_and_hubs" class="applet-button" target="_self">FIND A PRODUCT</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#how_do_you_buy" data-link="#how_do_you_buy" class="applet-button" target="_self">FIND A DEALER</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#winches_and_hubs" data-link="#winches_and_hubs" class="applet-button" target="_self">BECOME A DEALER</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section id="section2">
                 <div class="section-content">
                     <div class="container-fluid">
@@ -107,29 +146,6 @@ get_header(); ?>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="category-section">
-                <div class="section-content">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <ul class="category-nav">
-                                    <li>
-                                        <a href="#winches_and_hubs" data-link="#winches_and_hubs" class="applet-button" target="_self">FIND A PRODUCT</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="#how_do_you_buy" data-link="#how_do_you_buy" class="applet-button" target="_self">FIND A DEALER</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="#winches_and_hubs" data-link="#winches_and_hubs" class="applet-button" target="_self">BECOME A DEALER</a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -333,22 +349,22 @@ get_header(); ?>
                                                 </div>
                                                 <ul class="select-drop-list">
                                                     <li>
-                                                        <a href="javascript:void(0);">CHEVY</a>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">CHEVY</a>
                                                     </li>
                                                     <li>
-                                                        <a href="javascript:void(0);">JEEP</a>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">JEEP</a>
                                                     </li>
                                                     <li>
-                                                        <a href="javascript:void(0);">LAND ROVER</a>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">LAND ROVER</a>
                                                     </li>
                                                     <li>
-                                                        <a href="javascript:void(0);">CHEVY</a>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">CHEVY</a>
                                                     </li>
                                                     <li>
-                                                        <a href="javascript:void(0);">JEEP</a>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">JEEP</a>
                                                     </li>
                                                     <li>
-                                                        <a href="javascript:void(0);">LAND ROVER</a>
+                                                        <a href="#choose_your_product" class="applet-button" data-link="#choose_your_product">LAND ROVER</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -408,7 +424,7 @@ get_header(); ?>
                                                             <a class="view-product-button">VIEW PRODUCT</a>
                                                         </div>
                                                         <div class="col-md-7 product-content">
-                                                            <h5>(H9000)</h5>
+                                                            <h5>H9000</h5>
                                                             <p>Part Number: 75-52000C</p>
                                                             <p>Capacity: 9,000 pounds</p>
                                                             <p>Line Speed: 30rpm</p>
@@ -423,7 +439,7 @@ get_header(); ?>
                                                             <a class="view-product-button">VIEW PRODUCT</a>
                                                         </div>
                                                         <div class="col-md-7 product-content">
-                                                            <h5>(H9000)</h5>
+                                                            <h5>H9000</h5>
                                                             <p>Part Number: 75-52000C</p>
                                                             <p>Capacity: 9,000 pounds</p>
                                                             <p>Line Speed: 30rpm</p>
@@ -438,7 +454,7 @@ get_header(); ?>
                                                             <a class="view-product-button">VIEW PRODUCT</a>
                                                         </div>
                                                         <div class="col-md-7 product-content">
-                                                            <h5>(H9000)</h5>
+                                                            <h5>H9000</h5>
                                                             <p>Part Number: 75-52000C</p>
                                                             <p>Capacity: 9,000 pounds</p>
                                                             <p>Line Speed: 30rpm</p>
@@ -453,7 +469,7 @@ get_header(); ?>
                                                             <a class="view-product-button">VIEW PRODUCT</a>
                                                         </div>
                                                         <div class="col-md-7 product-content">
-                                                            <h5>(H9000)</h5>
+                                                            <h5>H9000</h5>
                                                             <p>Part Number: 75-52000C</p>
                                                             <p>Capacity: 9,000 pounds</p>
                                                             <p>Line Speed: 30rpm</p>
@@ -468,7 +484,7 @@ get_header(); ?>
                                                             <a class="view-product-button">VIEW PRODUCT</a>
                                                         </div>
                                                         <div class="col-md-7 product-content">
-                                                            <h5>(H9000)</h5>
+                                                            <h5>H9000</h5>
                                                             <p>Part Number: 75-52000C</p>
                                                             <p>Capacity: 9,000 pounds</p>
                                                             <p>Line Speed: 30rpm</p>
@@ -483,7 +499,7 @@ get_header(); ?>
                                                             <a class="view-product-button">VIEW PRODUCT</a>
                                                         </div>
                                                         <div class="col-md-7 product-content">
-                                                            <h5>(H9000)</h5>
+                                                            <h5>H9000</h5>
                                                             <p>Part Number: 75-52000C</p>
                                                             <p>Capacity: 9,000 pounds</p>
                                                             <p>Line Speed: 30rpm</p>
@@ -727,10 +743,10 @@ get_header(); ?>
                                         <div class="row">
                                             <div class="col-md-6 capacity-value">
                                                 <p class="capacity-text">I NEED A WINCH THAT CAN PULL:</p>
-                                                <p class="capacity-value">25,000 LBS</p>
+                                                <p class="capacity-value"><span id="capacity_value">2,000</span> LBS</p>
                                             </div>
                                             <div class="col-md-3">
-                                                <button class="small-button">VIEW WINCHES</button>
+                                                <a class="button small-button1 applet-button" href="#choose_your_product" data-link="#choose_your_product">VIEW WINCHES</a>
                                             </div>
                                         </div>
                                     </div>
@@ -855,27 +871,27 @@ get_header(); ?>
                                 <div class="row">
                                     <div class="col-md-4">
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/applet/atv.png" />
-                                        <button class="product-finder-button">ATV</button>
+                                        <a class="product-finder-button button applet-button" href="#choose_your_product" data-link="#choose_your_product">ATV</a>
                                     </div>
                                     <div class="col-md-4">
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/applet/utv.png" />
-                                        <button class="product-finder-button">UTV</button>
+                                        <a class="product-finder-button button applet-button" href="#choose_your_product" data-link="#choose_your_product">UTV</a>
                                     </div>
                                     <div class="col-md-4">
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/applet/jeep.png" />
-                                        <button class="product-finder-button">JEEP</button>
+                                        <a class="product-finder-button button applet-button" href="#choose_your_product" data-link="#choose_your_product">JEEP</a>
                                     </div>
                                     <div class="col-md-4">
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/applet/suv.png" />
-                                        <button class="product-finder-button">SUV</button>
+                                        <a class="product-finder-button button applet-button" href="#choose_your_product" data-link="#choose_your_product">SUV</a>
                                     </div>
                                     <div class="col-md-4">
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/applet/light_duty_truck.png" />
-                                        <button class="product-finder-button">LIGHT- DUTY TRUCK</button>
+                                        <a class="product-finder-button button applet-button" href="#choose_your_product" data-link="#choose_your_product">LIGHT- DUTY TRUCK</a>
                                     </div>
                                     <div class="col-md-4">
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/applet/heavy_duty_truck.png" />
-                                        <button class="product-finder-button">HEAVY- DUTY TRUCK</button>
+                                        <a class="product-finder-button button applet-button" href="#choose_your_product" data-link="#choose_your_product">HEAVY- DUTY TRUCK</a>
                                     </div>
                                 </div>
                             </div>
@@ -1166,7 +1182,23 @@ get_header(); ?>
             step: 2000,
             values: [2000, 4000, 6000, 8000, 10000, 12000, 14000, 16000, 18000, 20000],
             grid: true,
-            prettify_separator: ","
+            prettify_separator: ",",
+            onChange: function (data) {
+                var num = parseInt(data.from_value);
+                var value = num.toString();
+
+                $('#capacity_value').html(value.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ","));
+
+                if(num >= 6000 && num < 12000) {
+                    $('.irs-single').removeClass('second').addClass('first');
+                } else if(num >= 12000 && num < 18000) {
+                    $('.irs-single').removeClass('first').removeClass('third').addClass('second');
+                } else if(num >= 18000) {
+                    $('.irs-single').removeClass('second').addClass('third');
+                } else {
+                    $('.irs-single').removeClass('first').removeClass('second').removeClass('third');
+                }
+            }
         });
 
         $('.category-section').scrollToFixed({
