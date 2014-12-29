@@ -736,7 +736,8 @@ div[class*="col"].select-content {
     z-index: 1;
 }
 
-.feed-info.has-bg:hover .feed-content-overlay {
+.feed-info.has-bg:hover .feed-content-overlay,
+.feed-info.wp-post:hover .feed-content-overlay {
     opacity: 0.5;
 }
 
@@ -782,6 +783,20 @@ div[class*="col"].select-content {
     font-family: "NimbusSanTCon";
     font-weight: bold;
     font-size: 18px;
+}
+
+.feed-info.wp-post .feed-content-overlay {
+    z-index: 2;
+}
+
+.feed-info.wp-post .feed-content img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    margin: 0;
 }
 
 .feed-content h3 {

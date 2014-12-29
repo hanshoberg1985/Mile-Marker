@@ -970,7 +970,15 @@ get_header(); ?>
                                         $time = get_the_date();
                                         echo "
                                             <li class='feed-wrap col-lg-3 col-md-3 col-sm-4 col-xs-6'>
-                                                <div class='feed-info' href='$link'>
+                                                <div class='feed-info wp-post' href='$link'>
+                                                    <div class='feed-content-overlay'>
+                                                        <div class='feed-user-name'>$username</div>
+                                                        <div class='feed-content'>
+                                                            <h3>$title</h3>
+                                                            <p>$content</p>
+                                                        </div>
+                                                        <div class='feed-time'>$time</div>
+                                                    </div>
                                                     <div class='feed-info-wrapper'>
                                                         <div class='feed-user-name'>$username</div>
                                                         <div class='feed-content'>
