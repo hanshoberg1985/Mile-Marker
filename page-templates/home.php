@@ -417,96 +417,44 @@ get_header(); ?>
                                     <div class="col-md-10 col-md-offset-1">
                                         <div class="row">
                                             <ul class="product-list">
-                                                <li class="col-md-6">
-                                                    <div class="row product-item">
-                                                        <div class="col-md-5 product-img">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/images/applet/product_sample.png" />
-                                                            <a class="view-product-button">VIEW PRODUCT</a>
-                                                        </div>
-                                                        <div class="col-md-7 product-content">
-                                                            <h5>H9000</h5>
-                                                            <p>Part Number: 75-52000C</p>
-                                                            <p>Capacity: 9,000 pounds</p>
-                                                            <p>Line Speed: 30rpm</p>
-                                                            <p>Cable: 100' Steel</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="col-md-6">
-                                                    <div class="row product-item">
-                                                        <div class="col-md-5 product-img">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/images/applet/product_sample.png" />
-                                                            <a class="view-product-button">VIEW PRODUCT</a>
-                                                        </div>
-                                                        <div class="col-md-7 product-content">
-                                                            <h5>H9000</h5>
-                                                            <p>Part Number: 75-52000C</p>
-                                                            <p>Capacity: 9,000 pounds</p>
-                                                            <p>Line Speed: 30rpm</p>
-                                                            <p>Cable: 100' Steel</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="col-md-6">
-                                                    <div class="row product-item">
-                                                        <div class="col-md-5 product-img">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/images/applet/product_sample.png" />
-                                                            <a class="view-product-button">VIEW PRODUCT</a>
-                                                        </div>
-                                                        <div class="col-md-7 product-content">
-                                                            <h5>H9000</h5>
-                                                            <p>Part Number: 75-52000C</p>
-                                                            <p>Capacity: 9,000 pounds</p>
-                                                            <p>Line Speed: 30rpm</p>
-                                                            <p>Cable: 100' Steel</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="col-md-6">
-                                                    <div class="row product-item">
-                                                        <div class="col-md-5 product-img">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/images/applet/product_sample.png" />
-                                                            <a class="view-product-button">VIEW PRODUCT</a>
-                                                        </div>
-                                                        <div class="col-md-7 product-content">
-                                                            <h5>H9000</h5>
-                                                            <p>Part Number: 75-52000C</p>
-                                                            <p>Capacity: 9,000 pounds</p>
-                                                            <p>Line Speed: 30rpm</p>
-                                                            <p>Cable: 100' Steel</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="col-md-6">
-                                                    <div class="row product-item">
-                                                        <div class="col-md-5 product-img">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/images/applet/product_sample.png" />
-                                                            <a class="view-product-button">VIEW PRODUCT</a>
-                                                        </div>
-                                                        <div class="col-md-7 product-content">
-                                                            <h5>H9000</h5>
-                                                            <p>Part Number: 75-52000C</p>
-                                                            <p>Capacity: 9,000 pounds</p>
-                                                            <p>Line Speed: 30rpm</p>
-                                                            <p>Cable: 100' Steel</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="col-md-6">
-                                                    <div class="row product-item">
-                                                        <div class="col-md-5 product-img">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/images/applet/product_sample.png" />
-                                                            <a class="view-product-button">VIEW PRODUCT</a>
-                                                        </div>
-                                                        <div class="col-md-7 product-content">
-                                                            <h5>H9000</h5>
-                                                            <p>Part Number: 75-52000C</p>
-                                                            <p>Capacity: 9,000 pounds</p>
-                                                            <p>Line Speed: 30rpm</p>
-                                                            <p>Cable: 100' Steel</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
+                                                <?php
+                                                // product posts
+                                                $args = array(
+                                                    'post_type' => 'product',
+                                                    'orderby' => 'date',
+                                                    'order' => 'DESC'
+                                                );
+                                                $query = new WP_Query( $args );
+                                                if( $query->have_posts() ) {
+                                                    while ($query->have_posts()) {
+                                                        $query->the_post();
+                                                        $product_name = get_the_title();
+                                                        $part_number = get_field("part_number");
+                                                        $capacity = get_field("capacity");
+                                                        $line_speed = get_field("line_speed");
+                                                        $cable = get_field("cable");
+                                                        $product_image = get_field("product_image");
+                                                        $link = get_the_permalink();
+                                                        echo '
+                                                            <li class="col-md-6">
+                                                                <div class="row product-item">
+                                                                    <div class="col-md-5 product-img">
+                                                                        <img src="' . $product_image . '" />
+                                                                        <a class="view-product-button" href="' . $link . '">VIEW PRODUCT</a>
+                                                                    </div>
+                                                                    <div class="col-md-7 product-content">
+                                                                        <h5>' . $product_name . '</h5>
+                                                                        <p>Part Number: ' . $part_number . '</p>
+                                                                        <p>Capacity: ' . $capacity . '</p>
+                                                                        <p>Line Speed: ' . $line_speed . '</p>
+                                                                        <p>Cable: ' . $cable . '</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>';
+                                                    }
+                                                }
+                                                wp_reset_query();
+                                                ?>
                                             </ul>
                                         </div>
                                     </div>
