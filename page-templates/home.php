@@ -62,25 +62,6 @@ get_header(); ?>
                         <a href="http://milemarker.com/where-to-buy" target="_self">WHERE TO BUY</a>
                     </li>
                 </ul>
-                <div class="search-content">
-                    <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-                        <input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" placeholder="Search" />
-                        <button type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
-                    </form>
-                </div>
-                <div class="social-content">
-                    <ul class="social-list">
-                        <li>
-                            <a href="https://www.facebook.com/milemarker" target="_blank" title="facebook" class="facebook"></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/MileMarkerWinch" target="_blank" title="twitter" class="twitter"></a>
-                        </li>
-                        <li>
-                            <a href="http://instagram.com/milemarker_winch" target="_blank" title="instagram" class="instagram"></a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
         <div class="page-main-wrapper">
@@ -104,6 +85,25 @@ get_header(); ?>
                 </div>
             </section>
             <section class="category-section">
+                <div class="search-content">
+                    <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+                        <input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" placeholder="Search" />
+                        <button type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="social-content">
+                    <ul class="social-list">
+                        <li>
+                            <a href="https://www.facebook.com/milemarker" target="_blank" title="facebook" class="facebook"></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/MileMarkerWinch" target="_blank" title="twitter" class="twitter"></a>
+                        </li>
+                        <li>
+                            <a href="http://instagram.com/milemarker_winch" target="_blank" title="instagram" class="instagram"></a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="section-content">
                     <div class="container-fluid">
                         <div class="row">
